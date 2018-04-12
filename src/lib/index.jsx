@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-
 import TiArrowUp from "react-icons/lib/ti/arrow-up";
 
 const ArrowUp = () => <TiArrowUp style={{ fontSize: "2.25em" }} />;

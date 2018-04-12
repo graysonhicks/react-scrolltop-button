@@ -1,4 +1,4 @@
-# react-scrolltop
+# react-scrolltop-button
 
 React component for scrolling to top of the page.
 

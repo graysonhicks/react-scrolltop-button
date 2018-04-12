@@ -34,7 +34,7 @@
   "homepage": "https://github.com/graysonhicks/react-scrolltop-button",
   "repository": {
     "type": "git",
-    "url": "git@github.com:graysonhicks/react-scrolltop.git"
+    "url": "git@github.com:graysonhicks/react-scrolltop-button.git"
   },
   "dependencies": {
     "prop-types": "^15.6.1",

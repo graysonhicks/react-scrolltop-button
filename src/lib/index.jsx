@@ -25,9 +25,8 @@ const ScrollToTopButton = styled.button`
     background-color: black;
     color: white;
   }
-   {
-    ...props.style;
-  }
+
+  ...props.style;
 `;
 
 const MobileScrollToTopButton = ScrollToTopButton.extend`
@@ -69,7 +68,7 @@ class ScrollTop extends Component {
   }
 
   checkWindowSize() {
-    this.setState({ isMobile: window.innerWidth < 991 });
+    this.setState({ isMobile: window.innerWidth < this.props.breakpoint });
   }
 
   checkForScrollToTop() {
@@ -134,13 +133,13 @@ class ScrollTop extends Component {
   }
 
   render() {
-    let className = "react-scrolltop";
+    let className = "react-scrolltop-button";
     if (this.props.className) {
       className = `${className} ${this.props.className}`;
     }
 
     if (this.state.isMobile) {
-      className = `${className} react-scrolltop-mobile`;
+      className = `${className} react-scrolltop-button-mobile`;
     }
 
     // Clone this.props and then delete Component specific props so we can

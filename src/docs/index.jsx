@@ -6,6 +6,7 @@ import "./styles.css";
 function Demo() {
   return (
     <div>
+      <h1>Top</h1>
       <h1>Demo with examples of the component</h1>
       <h1>Demo with examples of the component</h1>
       <h1>Demo with examples of the component</h1>
@@ -34,8 +35,7 @@ function Demo() {
       <h1>Demo with examples of the component</h1>
       <h1>Demo with examples of the component</h1>
       <h1>Demo with examples of the component</h1>
-      <h1>Demo with examples of the component</h1>
-      <h1>Demo with examples of the component</h1>
+      <h1>Bottom</h1>
       <ScrollTop />
     </div>
   );

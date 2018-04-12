@@ -9,7 +9,7 @@
     "docs": "webpack-dev-server",
     "docs:prod": "webpack -p"
   },
-  "keywords": [],
+  "keywords": ["react", "scroll", "scroll to top", "button"],
   "license": "MIT",
   "peerDependencies": {
     "react": "^15.3.0 || ^16.2.0",
@@ -31,7 +31,7 @@
     "webpack-dev-server": "^2.11.0"
   },
   "author": "Grayson Hicks <graysonhicks@gmail.com>",
-  "homepage": "https://github.com/graysonhicks/react-scrolltop",
+  "homepage": "https://github.com/graysonhicks/react-scrolltop-button",
   "repository": {
     "type": "git",
     "url": "git@github.com:graysonhicks/react-scrolltop.git"

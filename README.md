@@ -4,48 +4,87 @@ React component for scrolling to top of the page.
 
 ## Demo
 
-http://graysonhicks.github.io/react-scrolltop/
+http://graysonhicks.github.io/react-scrolltop-button/
 
 ## Install
 
-`npm install react-scrolltop`
+`npm install react-scrolltop-button`
 
 ## Usage
 
-### Defaults
+### Props
 
-#### text `String`
+#### text
+
+`string`
 
 Desired text to show on desktop version of the button. No text shows on mobile.
 
-#### distance `Number`
+#### distance
+
+`number`
 
 The distance in pixels from the top of the document that button should show.
 
-#### breakpoint `Number`
+#### breakpoint
 
-Screen width when mobile/desktop buttons switch.
+`number`
 
-#### style `Object`
+Screen width in pixels when mobile/desktop buttons switch.
+
+#### style
+
+`object`
 
 Standard CSS style object to override or add to default styles.
 
-#### className `String`
+#### className
 
-Custom class name to be added to component. Is in addition to default `react-scrolltop` and `react-scrolltop-mobile` classes.
+`string`
 
-#### speed `Number`
+Custom class name to be added to component. Is in addition to default `react-scrolltop-button` and `react-scrolltop-button-mobile` classes. Base classes are not removed.
 
-Duration for scrolling to top (in milliseconds).
+#### speed
 
-#### target `Number`
+`number`
 
-Distance from top of page to scroll up to.
+Duration in milliseconds for scrolling to top .
 
-### Use defaults
+#### target
+
+`number`
+
+Distance in pixels from top of page to scroll up to.
+
+#### icon
+
+`element`
+
+A custom React component that is shown on the mobile button.
+
+### Defaults
+
+* text - "back to top"
+* distance - 50
+* breakpoint - 991
+* className - "react-scrolltop-button" / "react-scrolltop-button-mobile"
+* speed - 250
+* target - 0
+
+### Use all defaults
 
 `<ScrollTop />`
 
-### Override all defaults
+### Override/Add to all defaults
 
-`<ScrollTop email="mathews.kyle@gmail.com" size={100} rating="pg" default="monsterid" className="CustomAvatar-image" />`
+````<ScrollTop
+    text="take me to your header"
+    distance={100}
+    breakpoint={768}
+    style={{backgroundColor: 'red'}}
+    className="scroll-your-role"
+    speed={1000}
+    target={75}
+    icon={<MyIcon/>}
+/>```
+````

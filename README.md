@@ -12,6 +12,25 @@ http://graysonhicks.github.io/react-scrolltop-button/
 
 ## Usage
 
+### Use all defaults
+
+`<ScrollTop />`
+
+### Override/Add to defaults
+
+```
+<ScrollTop
+    text="take me to your header"
+    distance={100}
+    breakpoint={768}
+    style={{backgroundColor: 'red'}}
+    className="scroll-your-role"
+    speed={1000}
+    target={75}
+    icon={<MyIcon/>}
+/>
+```
+
 ### Props
 
 #### text
@@ -70,21 +89,3 @@ A custom React component that is shown on the mobile button.
 * className - "react-scrolltop-button" / "react-scrolltop-button-mobile"
 * speed - 250
 * target - 0
-
-### Use all defaults
-
-`<ScrollTop />`
-
-### Override/Add to all defaults
-
-````<ScrollTop
-    text="take me to your header"
-    distance={100}
-    breakpoint={768}
-    style={{backgroundColor: 'red'}}
-    className="scroll-your-role"
-    speed={1000}
-    target={75}
-    icon={<MyIcon/>}
-/>```
-````

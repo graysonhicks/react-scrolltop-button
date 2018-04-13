@@ -59,12 +59,12 @@ class ScrollTop extends Component {
     this.checkWindowSize();
     this.checkForScrollToTop();
     window.addEventListener("resize", this.checkWindowSize);
-    window.addEventListener(`scroll`, this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.checkWindowSize);
-    window.addEventListener(`scroll`, this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   checkWindowSize() {
@@ -87,7 +87,7 @@ class ScrollTop extends Component {
   }
 
   handleScroll() {
-    requestAnimationFrame(() => this.checkForScrollToTop());
+    this.checkForScrollToTop();
   }
 
   scrollUp() {
@@ -151,30 +151,26 @@ class ScrollTop extends Component {
     delete rest.breakpoint;
     delete rest.distance;
 
-    return (
-      <React.Fragment>
-        {this.state.showScrollToTop && this.state.isMobile ? (
-          <MobileScrollToTopButton
-            style={this.props.style}
-            {...rest}
-            className={className}
-            onClick={this.scrollUp}
-          >
-            {this.props.icon ? this.props.icon : <ArrowUp />}
-          </MobileScrollToTopButton>
-        ) : (
-          this.state.showScrollToTop && (
-            <ScrollToTopButton
-              style={this.props.style}
-              {...rest}
-              className={className}
-              onClick={this.scrollUp}
-            >
-              {this.props.text}
-            </ScrollToTopButton>
-          )
-        )}
-      </React.Fragment>
+    return this.state.showScrollToTop && this.state.isMobile ? (
+      <MobileScrollToTopButton
+        style={this.props.style}
+        {...rest}
+        className={className}
+        onClick={this.scrollUp}
+      >
+        {this.props.icon ? this.props.icon : <ArrowUp />}
+      </MobileScrollToTopButton>
+    ) : (
+      this.state.showScrollToTop && (
+        <ScrollToTopButton
+          style={this.props.style}
+          {...rest}
+          className={className}
+          onClick={this.scrollUp}
+        >
+          {this.props.text}
+        </ScrollToTopButton>
+      )
     );
   }
 }

@@ -49,9 +49,11 @@ const IndexHeadContainer = styled.div`
 `;
 
 const Hero = styled.div`
+  color: white;
   padding: 50px 0;
   & > h1 {
     font-weight: 600;
+  
   }
 `;
 

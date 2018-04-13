@@ -6,8 +6,8 @@
   "scripts": {
     "lib": "babel src/lib -d lib",
     "lib:watch": "babel src/lib -w -d lib",
-    "docs": "webpack-dev-server",
-    "docs:prod": "webpack -p"
+    "docs": "cd docs/ && gatsby develop",
+    "docs:prod": "cd docs && gatsby build"
   },
   "keywords": ["react", "scroll", "scroll to top", "button"],
   "license": "MIT",
@@ -27,8 +27,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "style-loader": "^0.19.1",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.0"
+    "webpack": "^3.10.0"
   },
   "author": "Grayson Hicks <graysonhicks@gmail.com>",
   "homepage": "https://github.com/graysonhicks/react-scrolltop-button",

@@ -12,8 +12,8 @@ const NavContainer = styled.div`
   .nav-link {
     font-size: 1.6rem;
     margin-right: 10px;
-    font-weight: 200;
-    color: black;
+    font-weight: bold;
+    color: white;
   }
 
   @media screen and (max-width: 600px) {

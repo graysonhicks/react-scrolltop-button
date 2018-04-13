@@ -14,14 +14,14 @@ const UserIcon = styled.a`
   margin-left: 25px;
   color: white;
   &:hover {
-    color: rgba(0, 0, 0, 0.2);
+    color: ${props => props.theme.codeEditGreen};
     border-bottom: none;
   }
 `;
 
 const iconStyle = {
-  width: "20px",
-  height: "20px"
+  width: "30px",
+  height: "30px"
 };
 
 class UserLinks extends Component {

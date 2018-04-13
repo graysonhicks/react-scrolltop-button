@@ -16,7 +16,7 @@ pre[class*="language-"] {
     -ms-hyphens: none;
     hyphens: none;
     background: #1d1f21;
-    color: #c5c8c6;
+    color: #dbe0dd;
 }
 
 pre[class*="language-"]::-moz-selection,
@@ -24,7 +24,7 @@ pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection {
     text-shadow: none;
-    background: #b4b7b4;
+    background: #e1e6e1;
 }
 
 pre[class*="language-"]::selection,
@@ -32,7 +32,7 @@ pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
     text-shadow: none;
-    background: #b4b7b4;
+    background: #e1e6e1;
 }
 
 pre[class*="language-"] {
@@ -50,11 +50,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #969896;
+    color: #c2c5c2;
 }
 
 .token.punctuation {
-    color: #c5c8c6;
+    color: #dce0de;
 }
 
 .token.namespace {
@@ -64,34 +64,34 @@ pre[class*="language-"] {
 .token.operator,
 .token.boolean,
 .token.number {
-    color: #de935f;
+    color: #db7730;
 }
 
 .token.property {
-    color: #f0c674;
+    color: #eeb33d;
 }
 
 .token.tag {
-    color: #81a2be;
+    color: #4082bb;
 }
 
 .token.string {
-    color: #8abeb7;
+    color: #27b8a4;
 }
 
 .token.selector {
-    color: #b294bb;
+    color: #a04db9;
 }
 
 .token.attr-name {
-    color: #de935f;
+    color: #db7730;
 }
 
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #8abeb7;
+    color: #27b8a4;
 }
 
 .token.attr-value,
@@ -99,18 +99,18 @@ pre[class*="language-"] {
 .token.control,
 .token.directive,
 .token.unit {
-    color: #b5bd68;
+    color: #afbd37;
 }
 
 .token.statement,
 .token.regex,
 .token.atrule {
-    color: #8abeb7;
+    color: #4bbdae;
 }
 
 .token.placeholder,
 .token.variable {
-    color: #81a2be;
+    color: #4884b9;
 }
 
 .token.deleted {
@@ -132,7 +132,7 @@ pre[class*="language-"] {
 }
 
 .token.important {
-    color: #c66;
+    color: #c54238;
 }
 
 .token.entity {
@@ -140,6 +140,6 @@ pre[class*="language-"] {
 }
 
 pre > code.highlight {
-    outline: 0.4em solid #c66;
+    outline: 0.4em solid #c54238;
     outline-offset: 0.4em;
 }

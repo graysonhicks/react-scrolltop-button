@@ -23,6 +23,11 @@
         {
           "post": "./api.md"
         }
+      ],
+      "Contributing": [
+        {
+          "post": "./contribute.md"
+        }
       ]
     }
   }

@@ -154,6 +154,19 @@ export const pageQuery = graphql`
               }
             }
           }
+          Contributing {
+            post {
+              id
+              childMarkdownRemark {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
         }
       }
     }

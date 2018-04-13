@@ -59,19 +59,19 @@ const StyledScrollTop = styled(ScrollTop)`
 
 #### text
 
-`string`
+`string` _(default: "back to top")_
 
 Desired text to show on desktop version of the button. No text shows on mobile.
 
 #### distance
 
-`number`
+`number` _(default: 50)_
 
 The distance in pixels from the top of the document that button should show.
 
 #### breakpoint
 
-`number`
+`number` _(default: 991)_
 
 Screen width in pixels when mobile/desktop buttons switch.
 
@@ -83,19 +83,19 @@ Standard CSS style object to override or add to default styles.
 
 #### className
 
-`string`
+`string` _(default: "react-scrolltop-button" / "react-scrolltop-button-mobile")_
 
 Custom class name to be added to component. Is in addition to default `react-scrolltop-button` and `react-scrolltop-button-mobile` classes. Base classes are not removed.
 
 #### speed
 
-`number`
+`number` _(default: 250)_
 
 Duration in milliseconds for scrolling to top .
 
 #### target
 
-`number`
+`number` _(default: 0)_
 
 Distance in pixels from top of page to scroll up to.
 
@@ -104,15 +104,6 @@ Distance in pixels from top of page to scroll up to.
 `element`
 
 A custom React component that is shown on the mobile button.
-
-### Defaults
-
-* `text` - "back to top"
-* `distance` - 50
-* `breakpoint` - 991
-* `className` - "react-scrolltop-button" / "react-scrolltop-button-mobile"
-* `speed` - 250
-* `target` - 0
 
 ## Contributing
 

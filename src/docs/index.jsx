@@ -1,8 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
 import ScrollTop from "../../lib";
+import styled from "styled-components";
 import "./styles.css";
 
+const StyledScrollTop = styled(ScrollTop)`
+  background-color: red;
+`;
 function Demo() {
   return (
     <div style={{ textAlign: "center" }}>
@@ -28,7 +32,7 @@ function Demo() {
       <h1>19</h1>
       <h1>20</h1>
       <h1>Bottom</h1>
-      <ScrollTop />
+      <StyledScrollTop />
     </div>
   );
 }

@@ -1,0 +1,29 @@
+{
+  "id": "table-of-contents",
+  "coolness": "very-cool",
+  "chapters": {
+    "Docs": {
+      "Install": [
+        {
+          "post": "./install.md"
+        }
+      ],
+      "Usage": [
+        {
+          "post": "./basic.md"
+        },
+        {
+          "post": "./override-defaults.md"
+        },
+        {
+          "post": "./with-styled-components.md"
+        }
+      ],
+      "Props": [
+        {
+          "post": "./api.md"
+        }
+      ]
+    }
+  }
+}

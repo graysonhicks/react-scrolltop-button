@@ -1,4 +1,4 @@
-# react-scrolltop-button
+# react-scrolltop-button ☝️
 
 React component for scrolling to top of the page.
 
@@ -8,9 +8,15 @@ http://graysonhicks.github.io/react-scrolltop-button/
 
 ## Install
 
-`npm install react-scrolltop-button`
+```javascript
+npm install react-scrolltop-button
+```
 
 ## Usage
+
+```javascript
+import ScrollTop from "react-scrolltop-button";
+```
 
 ### Use all defaults
 
@@ -18,18 +24,36 @@ http://graysonhicks.github.io/react-scrolltop-button/
 
 ### Override/Add to defaults
 
-```
+```javascript
 <ScrollTop
-    text="take me to your header"
-    distance={100}
-    breakpoint={768}
-    style={{backgroundColor: 'red'}}
-    className="scroll-your-role"
-    speed={1000}
-    target={75}
-    icon={<MyIcon/>}
+  text="take me to your header"
+  distance={100}
+  breakpoint={768}
+  style={{ backgroundColor: "red" }}
+  className="scroll-your-role"
+  speed={1000}
+  target={75}
+  icon={<MyIcon />}
 />
 ```
+
+### With `styled-components`
+
+`ScrollTop` styles can be modified with `styled-components` as well. Other props are then passed down through your styled component.
+
+```javascript
+const StyledScrollTop = styled(ScrollTop)`
+  background-color: red;
+`;
+
+<StyledScrollTop
+  text="i'm styled with styled-components and some other props are overwritten too"
+  distance={100}
+  breakpoint={768}
+/>;
+```
+
+> Note that overriding the `style` prop for the `<MyIcon/>` is done one of the same two ways as above.
 
 ### Props
 
@@ -83,9 +107,13 @@ A custom React component that is shown on the mobile button.
 
 ### Defaults
 
-* text - "back to top"
-* distance - 50
-* breakpoint - 991
-* className - "react-scrolltop-button" / "react-scrolltop-button-mobile"
-* speed - 250
-* target - 0
+* `text` - "back to top"
+* `distance` - 50
+* `breakpoint` - 991
+* `className` - "react-scrolltop-button" / "react-scrolltop-button-mobile"
+* `speed` - 250
+* `target` - 0
+
+## Contributing
+
+Fully open to contributions, come over to the repo and touch base!

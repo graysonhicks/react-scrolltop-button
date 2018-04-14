@@ -12,6 +12,8 @@ import Body from '../components/Layout/Body';
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
+    console.log(this.props.data.file);
+
     return (
       <div className="index-container">
         <Helmet title={config.siteTitle} />
@@ -69,8 +71,8 @@ export const pageQuery = graphql`
     }
     file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
-        resolutions(width: 128, height: 128) {
-          ...GatsbyImageSharpResolutions_noBase64
+        resolutions(width: 127, height: 127) {
+          ...GatsbyImageSharpResolutions
         }
       }
     }

@@ -72,12 +72,12 @@ module.exports = {
         display: 'minimal-ui',
         icons: [
           {
-            src: '/logos/261d.png',
+            src: '/logos/logo.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/logos/261d.png',
+            src: '/logos/logo.png',
             sizes: '512x512',
             type: 'image/png',
           },

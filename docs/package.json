@@ -1,6 +1,7 @@
 {
   "name": "gatsby-docs-starter",
-  "description": "GatsbyJS starter designed with documentation and tutorial websites in mind.",
+  "description":
+    "GatsbyJS starter designed with documentation and tutorial websites in mind.",
   "version": "1.0.1",
   "author": "Grayson Hicks <graysonhicks@gmail.com>",
   "dependencies": {
@@ -43,7 +44,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "gh-pages": "^1.0.0",
+    "gh-pages": "^1.1.0",
     "prettier": "^1.9.0",
     "remark-cli": "^4.0.0",
     "remark-preset-lint-recommended": "^3.0.1",
@@ -52,9 +53,7 @@
     "stylelint-config-standard": "^17.0.0",
     "write-good": "^0.11.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -64,6 +63,7 @@
     "build": "gatsby build",
     "build:pp": "gatsby build --prefix-paths",
     "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "clean": "rm -rf public",
     "lint:js": "eslint --ext .js,.jsx --ignore-pattern public,static .",
     "lint:md": "remark content/posts/",
@@ -71,8 +71,6 @@
     "format:js": "prettier 'src/**/*.{js,jsx}' --write"
   },
   "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-recommended"
-    ]
+    "plugins": ["remark-preset-lint-recommended"]
   }
 }

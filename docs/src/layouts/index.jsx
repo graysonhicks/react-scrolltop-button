@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import styled, { ThemeProvider } from "styled-components";
 import config from "../../data/SiteConfig";
 import "./css/index.css";
+import "./css/code.css";
 import theme from "./theme";
 
 export default class MainLayout extends React.Component {

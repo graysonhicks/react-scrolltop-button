@@ -17,4 +17,4 @@ Default prop values can be overriden by passing down as props.
 />
 ```
 
-> Note that overriding the `style` prop for the `<MyIcon/>` is done one of the same two ways as above.
+> Note that overriding the `style` prop for the `<MyIcon / >` is done one of the same two ways as above.

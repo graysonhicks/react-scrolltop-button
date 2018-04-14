@@ -13,11 +13,9 @@ class MainHeader extends React.Component {
 }
 
 const SiteContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: ${props => props.theme.brand};
-  padding:  25px;
+  padding: ${props => props.theme.sitePadding};
+  text-align: center;
 `
 
 export default MainHeader;

@@ -20,14 +20,20 @@ const NavContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+
+    .nav-link {
+      padding-top: 5px;
+    }
 
     section {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
     }
-
-    span {
-      display: none;
-    }
+   
   }
 `;
 
@@ -45,10 +51,11 @@ class Navigation extends React.Component {
           <Link className="nav-link" to="/demo">
             {" "}DEMO{" "}
           </Link>
-        </section>
-        <span>
+         
           <UserLinks />
-        </span>
+         
+        </section>
+   
       </NavContainer>
     );
   }

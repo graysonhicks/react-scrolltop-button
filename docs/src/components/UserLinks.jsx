@@ -3,11 +3,16 @@ import { FaGithub } from "react-icons/lib/fa";
 import styled from "styled-components";
 
 const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
+  float: right;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+    @media screen and (max-width: 600px) {
+      float: clear;
+      position: unset;
+
+  }
 `;
 
 const UserIcon = styled.a`
@@ -16,6 +21,11 @@ const UserIcon = styled.a`
   &:hover {
     color: ${props => props.theme.codeEditGreen};
     border-bottom: none;
+  }
+
+     @media screen and (max-width: 600px) {
+    margin-left: 0px;
+
   }
 `;
 

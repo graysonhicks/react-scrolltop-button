@@ -15,6 +15,7 @@ class Index extends React.Component {
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
         <main>
+    
           <IndexHeadContainer>
             <Navigation />
             <Hero>

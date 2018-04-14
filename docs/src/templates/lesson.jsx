@@ -8,8 +8,6 @@ import SiteHeader from "../components/Layout/Header";
 import config from "../../data/SiteConfig";
 import TableOfContents from "../components/Layout/TableOfContents";
 
-import "./b16-tomorrow-dark.css";
-
 export default class LessonTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;

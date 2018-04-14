@@ -84,10 +84,15 @@ class ScrollTop extends Component {
         showScrollToTop: false
       });
     }
+
+    this.ticking = false;
   }
 
   handleScroll() {
-    this.checkForScrollToTop();
+    if (!this.ticking) {
+      this.ticking = true;
+      requestAnimationFrame(() => this.checkForScrollToTop());
+    }
   }
 
   scrollUp() {

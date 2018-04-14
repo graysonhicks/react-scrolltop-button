@@ -4,6 +4,7 @@ const _ = require('lodash');
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
   let slug;
+
   if (node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);

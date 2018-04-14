@@ -7,7 +7,7 @@
     "lib": "babel src/lib -d lib",
     "lib:watch": "babel src/lib -w -d lib",
     "docs": "cd docs/ && gatsby develop",
-    "docs:prod": "cd docs && gatsby build"
+    "docs:prod": "cd docs && npm run deploy"
   },
   "keywords": ["react", "scroll", "scroll to top", "button"],
   "license": "MIT",

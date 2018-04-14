@@ -10,6 +10,8 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -19,8 +21,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
-        path: `${__dirname}/content/`,
+        name: 'images',
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'docs',
+        path: `${__dirname}/content/docs/`,
       },
     },
     {
@@ -48,7 +57,6 @@ module.exports = {
         color: config.themeColor,
       },
     },
-    'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-json',

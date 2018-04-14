@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 import SEO from '../components/SEO';
 import config from '../../data/SiteConfig';
@@ -19,7 +20,9 @@ class Index extends React.Component {
           <IndexHeadContainer>
             <Navigation />
             <Hero>
-              <img src={config.siteLogo} width="150px" />
+              <Img
+                resolutions={this.props.data.file.childImageSharp.resolutions}
+              />
               <h1>{config.siteTitle}</h1>
               <h4>{config.siteDescription}</h4>
             </Hero>
@@ -61,6 +64,13 @@ export const pageQuery = graphql`
           frontmatter {
             title
           }
+        }
+      }
+    }
+    file(relativePath: { eq: "logo.png" }) {
+      childImageSharp {
+        resolutions(width: 128, height: 128) {
+          ...GatsbyImageSharpResolutions
         }
       }
     }

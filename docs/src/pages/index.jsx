@@ -1,11 +1,12 @@
-import React from "react";
-import Helmet from "react-helmet";
-import styled from "styled-components";
+import React from 'react';
+import Helmet from 'react-helmet';
+import styled from 'styled-components';
 
-import SEO from "../components/SEO";
-import config from "../../data/SiteConfig";
-import CtaButton from "../components/CtaButton";
-import Navigation from "../components/Layout/Navigation";
+import SEO from '../components/SEO';
+import config from '../../data/SiteConfig';
+
+import Navigation from '../components/Layout/Navigation';
+import Body from '../components/Layout/Body';
 
 class Index extends React.Component {
   render() {
@@ -15,26 +16,15 @@ class Index extends React.Component {
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
         <main>
-    
           <IndexHeadContainer>
             <Navigation />
             <Hero>
               <img src={config.siteLogo} width="150px" />
-              <h1>
-                {config.siteTitle}
-              </h1>
-              <h4>
-                {config.siteDescription}
-              </h4>
+              <h1>{config.siteTitle}</h1>
+              <h4>{config.siteDescription}</h4>
             </Hero>
           </IndexHeadContainer>
-          <BodyContainer>
-            <MainDescription>
-              See it in a demo, or how to quickly add it to your project.
-            </MainDescription>
-            <CtaButton to={"/install"}>DOCS</CtaButton>
-            <CtaButton to={"/demo"}>DEMO</CtaButton>
-          </BodyContainer>
+          <Body />
         </main>
       </div>
     );
@@ -54,18 +44,8 @@ const Hero = styled.div`
   padding: 50px 0;
   & > h1 {
     font-weight: 600;
-  
   }
 `;
-
-const BodyContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
-  max-width: ${props => props.theme.contentWidthLaptop};
-  margin: 0 auto;
-  text-align: center;
-`;
-
-const MainDescription = styled.p`text-align: center;`;
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`

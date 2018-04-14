@@ -53,7 +53,8 @@
 }
 
 .react-toggle--checked .react-toggle-track {
-  background-color: #19ab27;
+  background-color: #82bf56;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {

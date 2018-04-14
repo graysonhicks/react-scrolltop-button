@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
 
 class TableOfContents extends React.Component {
   constructor() {
@@ -11,9 +11,9 @@ class TableOfContents extends React.Component {
 
   formatChapterTitle(title) {
     return title
-      .split("_")
+      .split('_')
       .map(word => word[0].toUpperCase() + word.substring(1))
-      .join(" ");
+      .join(' ');
   }
 
   addSubchapterJSX(node) {
@@ -32,16 +32,16 @@ class TableOfContents extends React.Component {
     );
   }
 
-  buildLessonItemNodes(nodeArray) {
+  buildDocItemNodes(nodeArray) {
     nodeArray.forEach(node => {
       this.nodeListItemsToRender.push(
-        <LessonLIContainer key={node.post.id}>
+        <DocLIContainer key={node.post.id}>
           <Link to={node.post.childMarkdownRemark.fields.slug}>
             <li>
               <h6>{node.post.childMarkdownRemark.frontmatter.title}</h6>
             </li>
           </Link>
-        </LessonLIContainer>
+        </DocLIContainer>
       );
     });
   }
@@ -60,7 +60,7 @@ class TableOfContents extends React.Component {
   //
   // If the node is an Array, it holds the actual page nodes itself,
   // 1. Add the node's value as either a chapter <li> or subchapter <li> - based on level
-  // 2. Build the lesson <li> links
+  // 2. Build the doc <li> links
   //
   // Else, its an object, so it must be a chapter or sub-chapter
   // 1. build the Chapter <li>
@@ -81,7 +81,7 @@ class TableOfContents extends React.Component {
       if (Array.isArray(nodes[node])) {
         // Add the Lowest Level Chapter Name (Title of Array):
         this.buildChapterNodes(node);
-        this.buildLessonItemNodes(nodes[node]);
+        this.buildDocItemNodes(nodes[node]);
         if (nextNode === undefined) {
           this.currentLevel -= 1;
         }
@@ -115,7 +115,7 @@ const TableOfContentsContainer = styled.div`
   }
 `;
 
-const LessonLIContainer = styled.div`
+const DocLIContainer = styled.div`
   li {
     margin: 0;
     h6,

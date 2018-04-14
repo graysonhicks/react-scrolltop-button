@@ -1,14 +1,14 @@
-import React from "react";
-import Helmet from "react-helmet";
-import styled from "styled-components";
-import Link from "gatsby-link";
+import React from 'react';
+import Helmet from 'react-helmet';
+import styled from 'styled-components';
+import Link from 'gatsby-link';
 
-import SEO from "../components/SEO";
-import SiteHeader from "../components/Layout/Header";
-import config from "../../data/SiteConfig";
-import TableOfContents from "../components/Layout/TableOfContents";
+import SEO from '../components/SEO';
+import SiteHeader from '../components/Layout/Header';
+import config from '../../data/SiteConfig';
+import TableOfContents from '../components/Layout/TableOfContents';
 
-export default class LessonTemplate extends React.Component {
+export default class DocTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.postBySlug;
@@ -34,9 +34,7 @@ export default class LessonTemplate extends React.Component {
           </ToCContainer>
           <BodyContainer>
             <div>
-              <h1>
-                {post.title}
-              </h1>
+              <h1>{post.title}</h1>
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </div>
           </BodyContainer>
@@ -102,7 +100,7 @@ const ToCContainer = styled.div`
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query LessonBySlug($slug: String!) {
+  query DocsBySlug($slug: String!) {
     postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
@@ -111,24 +109,11 @@ export const pageQuery = graphql`
         title
       }
     }
-    tableOfContents: lessonsJson {
+    tableOfContents: docsJson {
       coolness
       chapters {
         Docs {
-          Install {
-            post {
-              id
-              childMarkdownRemark {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
-          }
-          Usage {
+          Install_and_Usage {
             post {
               id
               childMarkdownRemark {

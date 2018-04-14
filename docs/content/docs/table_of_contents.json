@@ -3,12 +3,10 @@
   "coolness": "very-cool",
   "chapters": {
     "Docs": {
-      "Install": [
+      "Install_and_Usage": [
         {
           "post": "./install.md"
-        }
-      ],
-      "Usage": [
+        },
         {
           "post": "./basic.md"
         },

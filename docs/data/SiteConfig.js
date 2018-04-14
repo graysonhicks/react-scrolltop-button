@@ -4,7 +4,7 @@ module.exports = {
   siteTitleAlt: 'Gatsby Starter Template for Creating Docs', // Alternative site title for SEO.
   siteLogo: '/logos/261d.png', // Logo used for SEO and manifest.
   siteUrl: 'https://graysonhicks.github.io/react-scrolltop-button', // Domain of your website without pathPrefix.
-  pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: '/react-scrolltop-button', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: 'React component for scrolling to top of the page.', // Website description used for RSS feeds/meta description tag.
   userName: 'User', // Username to display in the author segment.
   userTwitter: 'graysonhicks', // Optionally renders "Follow Me" in the UserInfo segment.

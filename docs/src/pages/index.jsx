@@ -70,7 +70,7 @@ export const pageQuery = graphql`
     file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
         resolutions(width: 128, height: 128) {
-          ...GatsbyImageSharpResolutions
+          ...GatsbyImageSharpResolutions_noBase64
         }
       }
     }

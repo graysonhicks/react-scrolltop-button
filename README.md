@@ -4,7 +4,7 @@ React component for scrolling to top of the page.
 
 ## Demo
 
-http://graysonhicks.github.io/react-scrolltop-button/
+http://graysonhicks.github.io/react-scrolltop-button/demo/
 
 ## Install
 

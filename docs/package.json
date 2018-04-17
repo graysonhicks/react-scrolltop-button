@@ -1,7 +1,6 @@
 {
   "name": "gatsby-docs-starter",
-  "description":
-    "GatsbyJS starter designed with documentation and tutorial websites in mind.",
+  "description": "GatsbyJS starter designed with documentation and tutorial websites in mind.",
   "version": "1.0.1",
   "author": "Grayson Hicks <graysonhicks@gmail.com>",
   "dependencies": {
@@ -55,7 +54,9 @@
     "stylelint-config-standard": "^17.0.0",
     "write-good": "^0.11.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -73,6 +74,8 @@
     "format:js": "prettier 'src/**/*.{js,jsx}' --write"
   },
   "remarkConfig": {
-    "plugins": ["remark-preset-lint-recommended"]
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }

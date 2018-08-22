@@ -4,7 +4,7 @@
   "description": "A reusable, customizable scroll-to-top React component",
   "main": "lib/index.js",
   "scripts": {
-    "lib": "babel src/lib -d lib",
+    "lib": "babel src/lib -d lib --presets minify",
     "lib:watch": "babel src/lib -w -d lib",
     "docs": "cd docs/ && gatsby develop",
     "docs:prod": "cd docs && npm run deploy"
@@ -28,6 +28,7 @@
     "@babel/preset-env": "^7.0.0-beta.44",
     "@babel/preset-react": "^7.0.0-beta.44",
     "babel-loader": "^8.0.0-beta.0",
+    "babel-preset-minify": "^0.4.3",
     "css-loader": "^0.28.8",
     "html-webpack-plugin": "^2.30.1",
     "react": "^16.2.0",

@@ -1,6 +1,6 @@
 {
   "name": "react-scrolltop-button",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A reusable, customizable scroll-to-top React component",
   "main": "lib/index.js",
   "scripts": {

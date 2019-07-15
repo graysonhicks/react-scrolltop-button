@@ -6,24 +6,24 @@ import TiArrowUp from "react-icons/lib/ti/arrow-up";
 const ArrowUp = () => <TiArrowUp style={{ fontSize: "2.25em" }} />;
 
 const ScrollToTopButton = styled.button`
-  position: fixed;
-  right: 5%;
-  bottom: 10%;
-  padding: 15px;
-  border-radius: 10px;
-  border: 2px solid black;
-  font-weight: bold;
-  background-color: white;
-  cursor: pointer;
-  transition: all 0.5s;
+  position: ${props => props.noStyling ? "" : "fixed"};
+  right: ${props => props.noStyling ? "" : "5%"};
+  bottom: ${props => props.noStyling ? "" : "10%"};
+  padding: ${props => props.noStyling ? "" : "15px"};
+  border-radius: ${props => props.noStyling ? "" : "10px"};
+  border: ${props => props.noStyling ? "" : "2px solid black"};
+  font-weight: ${props => props.noStyling ? "" : "bold"};
+  background-color: ${props => props.noStyling ? "" : "white"};
+  cursor: ${props => props.noStyling ? "" : "pointer"};
+  transition: ${props => props.noStyling ? "" : "all 0.5s"};
 
   &:focus {
-    outline: none;
+    outline: ${props => props.noStyling ? "" : "none"};
   }
 
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: ${props => props.noStyling ? "" : "black"};
+    color: ${props => props.noStyling ? "" : "white"};
   }
 
   ...props.style;

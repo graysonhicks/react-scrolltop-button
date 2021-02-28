@@ -29,7 +29,7 @@ const ScrollToTopButton = styled.button`
   ...props.style;
 `;
 
-const MobileScrollToTopButton = ScrollToTopButton.extend`
+const MobileScrollToTopButton = styled(ScrollToTopButton)`
   position: fixed;
   right: 5%;
   bottom: 5%;
@@ -45,7 +45,7 @@ class ScrollTop extends Component {
 
     this.state = {
       isMobile: false,
-      showScrollToTop: null
+      showScrollToTop: null,
     };
 
     this.checkWindowSize = this.checkWindowSize.bind(this);
@@ -77,11 +77,11 @@ class ScrollTop extends Component {
       document.documentElement.scrollTop > this.props.distance
     ) {
       this.setState({
-        showScrollToTop: true
+        showScrollToTop: true,
       });
     } else {
       this.setState({
-        showScrollToTop: false
+        showScrollToTop: false,
       });
     }
   }
@@ -121,7 +121,8 @@ class ScrollTop extends Component {
   getScrollTop() {
     return (
       document.body.scrollTop ||
-      ((document.documentElement && document.documentElement.scrollTop) || 0)
+      (document.documentElement && document.documentElement.scrollTop) ||
+      0
     );
   }
 
@@ -183,7 +184,7 @@ ScrollTop.propTypes = {
   breakpoint: PropTypes.number,
   icon: PropTypes.element,
   speed: PropTypes.number,
-  target: PropTypes.number
+  target: PropTypes.number,
 };
 
 ScrollTop.defaultProps = {
@@ -191,7 +192,7 @@ ScrollTop.defaultProps = {
   distance: 50,
   breakpoint: 991,
   speed: 250,
-  target: 0
+  target: 0,
 };
 
 export default ScrollTop;

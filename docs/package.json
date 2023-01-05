@@ -5,7 +5,7 @@
   "author": "Grayson Hicks <graysonhicks@gmail.com>",
   "dependencies": {
     "babel-plugin-lodash": "^3.3.4",
-    "gatsby": "^1.9.279",
+    "gatsby": "^5.3.3",
     "gatsby-image": "^1.0.55",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-catch-links": "^1.0.26",
@@ -22,7 +22,7 @@
     "gatsby-remark-images": "^1.5.67",
     "gatsby-remark-prismjs": "^1.2.24",
     "gatsby-remark-responsive-iframe": "^1.4.20",
-    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-source-filesystem": "^5.3.1",
     "gatsby-transformer-json": "^1.0.20",
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.27",
